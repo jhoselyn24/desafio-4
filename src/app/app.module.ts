@@ -1,24 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PagesModuleModule } from './pages-module/pages-module.module';
 
-import { PageModuleModule } from './pages/page-module/page-module.module';
-
-import { ContentPageComponent } from './pages/content-page/content-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContentPageComponent
   ],
   imports: [
     BrowserModule,
-    PageModuleModule,
-  ],
-  exports: [
-    ContentPageComponent,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    PagesModuleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
